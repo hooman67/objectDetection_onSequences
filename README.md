@@ -1,9 +1,7 @@
-# BucketMonitoring Intelligence Series
+# Object Detection on sequences of images (video)
 
 ## What is this repository for?
-* This is a linux-python-tensorflow project, for missingToothDetection, and frame selection for FM and WM for the intelligence series.
-* this repo is used for developing TM and FM/WM frame selection algorithms. To train the YOLO networks or LSTMs use https://bitbucket.org/motionmetricsdev/yolo-v2
-* Version: 1.0.0 (Iteration 1)
+* Given a sequence of frames, detect the objects in a test frame (las element of the sequence)
 
 ## How do I get set up?
 1. Create a new Anaconda or venv environment with python 3.5 installed.
@@ -24,20 +22,6 @@
 
 
 ### 1. Data preparation
-        1.1 Get the following csv from jira:
-            **For Hydraulics:
-            project="Data Archive" and "Bucket Bounding Box Images Labeled" = Yes AND "Teeth Images Labeled" = yes AND ("Equipment Type/Model" = Hydraulic ) and "Camera Type" = Optical and "Equipment Type/Model" != "Shovel Model"
-
-            **For Cable:
-            project="Data Archive" and "Bucket Bounding Box Images Labeled" = Yes AND "Teeth Images Labeled" = yes AND ("Equipment Type/Model" = "P&H" or "Equipment Type/Model" = Bucyrus ) and "Camera Type" = Optical and "Equipment Type/Model" != "Shovel Model"
-
-            **For Backhoe:
-            project="Data Archive" and "Equipment Type/Model" = Backhoe and "Teeth Images Labeled" = Yes and "Scene Images Labeled" = yes and "Camera Type" = Optical
-
-            ### 2. Edit the configuration file
-            The configuration file is a json file, which looks like this:
-
-
         1.2 The exportJiraImages.py  inside:   Make sure you use cnn_rnn branch for everything.
             https://bitbucket.org/motionmetricsdev/yolo-v2/src/cnn_rnn/data_gen/
 
